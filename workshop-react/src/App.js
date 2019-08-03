@@ -27,7 +27,7 @@ if(this.state.exibeDados){
 }
 
   return (
-    <div>
+    <div className="App">
       <HelloStateless nome="Gustavo" sobrenome="Barska"></HelloStateless>
       {this.state.exibeDados ? <HelloStatefull nome={name}></HelloStatefull> : null}
       {this.state.exibeDados && <HelloStatefull nome={name}></HelloStatefull>}

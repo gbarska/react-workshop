@@ -29,7 +29,7 @@ class HelloStatefull extends React.Component{
     }
 
     render(){
-        return <div class="statefull" >Hello, {this.props.nome}
+        return <div className="statefull" >Hello, {this.props.nome}
         <div>You {this.state.clicou}</div>
         <button onClick={this.handleClick.bind(this)}>Click me</button>
         </div>

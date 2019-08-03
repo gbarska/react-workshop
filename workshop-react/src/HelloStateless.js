@@ -1,7 +1,7 @@
 import React from 'react';
 
 function HelloStateless(props){
-    return <div class="stateless">Hello, {props.nome} {props.sobrenome}</div>
+    return <div style={ {fontWeight: 'bold', color: 'red'} } className="stateless">Hello, {props.nome} {props.sobrenome}</div>
 }
 
 export default HelloStateless;
