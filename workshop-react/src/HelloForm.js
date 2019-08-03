@@ -17,7 +17,7 @@ class HelloForm extends React.Component{
     }
 
     render(){
-        return <div><h1>A react form</h1>
+        return <div><h3>A react form</h3>
         <input type="text" onChange={this.handleChange.bind(this)} />
         <div>{this.state.texto}</div>
         <button onClick={this.handleClick.bind(this)}>Click me</button>

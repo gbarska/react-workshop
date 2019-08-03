@@ -1,39 +1,24 @@
 import React from 'react';
-// import logo from './logo.svg';
+import Home from './Home';
+import Lista from './Lista';
 import './App.css';
-import HelloStateless from './HelloStateless';
-import HelloStatefull from './HelloStatefull';
-import HelloForm from './HelloForm';
+
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+
 // function App() {
   class App extends React.Component{
 
-    state = {
-      exibeDados: true
-    }
-
-    componentDidMount(){
-      setTimeout(()=>{
-        this.setState({
-          exibeDados: false
-        })
-      },3000);
-    }
-
  render (){
-let name = "new name";
-
-if(this.state.exibeDados){
-  name = 'other name'
-}
-
   return (
+    <BrowserRouter>
     <div className="App">
-      <HelloStateless nome="Gustavo" sobrenome="Barska"></HelloStateless>
-      {this.state.exibeDados ? <HelloStatefull nome={name}></HelloStatefull> : null}
-      {this.state.exibeDados && <HelloStatefull nome={name}></HelloStatefull>}
-      <HelloStatefull nome={name}></HelloStatefull>
-      <HelloForm></HelloForm>
+    <h1 className="Title" style={{display:'inline-block'}}> The App</h1>  
+    <br></br>
+    <Link to="/">Inicio</Link> | <Link to="/Lista">Lista</Link>
+    <Route path="/" exact component={Home}></Route>
+    <Route path="/Lista" component={Lista}></Route>
     </div>
+    </BrowserRouter>
   );
 }
 }
