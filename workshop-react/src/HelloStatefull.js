@@ -16,8 +16,9 @@ class HelloStatefull extends React.Component{
         console.log('after the component is rendered...');
     }
 
-    componentDidUpdate(){
-        console.log('after the component was updated...');
+    componentDidUpdate(prevState,prevProps){
+        console.log('the state was: ' + prevState);
+        console.log('after the   component was updated...');
     }
 
     componentWillUnmount(){
