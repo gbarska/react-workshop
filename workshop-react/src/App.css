@@ -31,3 +31,17 @@
     transform: rotate(360deg);
   }
 }
+
+
+.stateless{
+border: 1px solid red;
+}
+
+.statefull{
+ border: 1px solid blue; 
+}
+
+
+div{
+  margin-top: 10px;
+}

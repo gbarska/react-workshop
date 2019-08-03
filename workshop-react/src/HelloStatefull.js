@@ -19,6 +19,9 @@ class HelloStatefull extends React.Component{
     componentDidUpdate(prevState,prevProps){
         console.log('the state was: ' + prevState);
         console.log('after the   component was updated...');
+
+        console.log('the props were: '+ prevProps);
+        console.log('the props now are: '+this.props);
     }
 
     componentWillUnmount(){
@@ -26,7 +29,7 @@ class HelloStatefull extends React.Component{
     }
 
     render(){
-        return <div>Hello, {this.props.nome}
+        return <div class="statefull" >Hello, {this.props.nome}
         <div>You {this.state.clicou}</div>
         <button onClick={this.handleClick.bind(this)}>Click me</button>
         </div>
